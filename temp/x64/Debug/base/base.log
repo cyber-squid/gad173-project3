@@ -1,0 +1,30 @@
+﻿  animator.cpp
+  example.cpp
+  main.cpp
+  map.cpp
+  saveandload.cpp
+  tile.cpp
+C:\SAE Code Projects\GAD173-p3-wip\projects\base\map.cpp(32,38): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\SAE Code Projects\GAD173-p3-wip\projects\base\map.cpp(85,45): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\SAE Code Projects\GAD173-p3-wip\projects\base\map.cpp(88,21): warning C4244: 'argument': conversion from 'size_t' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\SAE Code Projects\GAD173-p3-wip\projects\base\map.cpp(87,65): warning C4244: 'argument': conversion from 'size_t' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\SAE Code Projects\GAD173-p3-wip\projects\base\animator.cpp(11,49): warning C4458: declaration of 'spriteWidth' hides class member
+C:\SAE Code Projects\GAD173-p3-wip\projects\base\animator.h(23,6): message : see declaration of 'Animator::spriteWidth' (compiling source file animator.cpp)
+C:\SAE Code Projects\GAD173-p3-wip\projects\base\animator.cpp(11,66): warning C4458: declaration of 'spriteHeight' hides class member
+C:\SAE Code Projects\GAD173-p3-wip\projects\base\animator.h(24,6): message : see declaration of 'Animator::spriteHeight' (compiling source file animator.cpp)
+C:\SAE Code Projects\GAD173-p3-wip\projects\base\animator.cpp(61,44): warning C4458: declaration of 'startFrames' hides class member
+C:\SAE Code Projects\GAD173-p3-wip\projects\base\animator.h(11,15): message : see declaration of 'Animator::startFrames' (compiling source file animator.cpp)
+C:\SAE Code Projects\GAD173-p3-wip\projects\base\animator.cpp(61,70): warning C4458: declaration of 'endFrames' hides class member
+C:\SAE Code Projects\GAD173-p3-wip\projects\base\animator.h(12,15): message : see declaration of 'Animator::endFrames' (compiling source file animator.cpp)
+C:\SAE Code Projects\GAD173-p3-wip\projects\base\saveandload.cpp(26,32): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\SAE Code Projects\GAD173-p3-wip\projects\base\saveandload.cpp(50,57): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\SAE Code Projects\GAD173-p3-wip\projects\base\example.cpp(42,28): warning C4100: 'deltaT': unreferenced formal parameter
+  base.vcxproj -> C:\SAE Code Projects\GAD173-p3-wip\bin\base_d.exe

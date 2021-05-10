@@ -14,7 +14,7 @@ void Scene::Load(sf::RenderWindow& window)
 	isLoaded = true;
 }
 
-void Scene::Update()
+void Scene::Update(sf::RenderWindow& window)
 {
 }
 

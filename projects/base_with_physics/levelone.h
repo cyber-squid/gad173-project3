@@ -8,10 +8,11 @@ public:
 	~LevelOne();
 
 	void Load(sf::RenderWindow& window);
-	void Update();
+	void Update(sf::RenderWindow& window);
 	void Render(sf::RenderWindow& window);
 
 	sf::Sprite* backgroundSprite;
 	
+	std::string MapFileOne = "savefile.txt";
 };
 

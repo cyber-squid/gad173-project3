@@ -131,8 +131,7 @@ void Example::update(float deltaT)
 		{
 			MapTiles.tiles[selectedSquare].Load(MapTiles.blueBlockTilesheet, TILE_WIDTH, TILE_HEIGHT);
 			MapTiles.tiles[selectedSquare].spritesheet.setColor(sf::Color(255, 255, 255, 0));
-			//MapTiles.tileset[selectedSquare].setTexture(*MapTiles.errorBlockTexture);
-			//MapTiles.tileset[selectedSquare].setColor(sf::Color(255, 255, 255, 0));
+			
 			MapTiles.tiles[selectedSquare].tileID = 0;
 			MapTiles.saveMap[selectedSquare] = 0;
 		}
@@ -140,8 +139,7 @@ void Example::update(float deltaT)
 		{
 			MapTiles.tiles[selectedSquare].Load(MapTiles.redBlockTilesheet, TILE_WIDTH, TILE_HEIGHT);
 			MapTiles.tiles[selectedSquare].spritesheet.setColor(sf::Color(255, 255, 255, 255));
-			//MapTiles.tileset[selectedSquare].setTexture(*MapTiles.redBlockTexture);
-			//MapTiles.tileset[selectedSquare].setColor(sf::Color(255, 255, 255, 255));
+			
 			MapTiles.tiles[selectedSquare].tileID = 1;
 			MapTiles.saveMap[selectedSquare] = 1;
 		}
@@ -149,8 +147,7 @@ void Example::update(float deltaT)
 		{
 			MapTiles.tiles[selectedSquare].Load(MapTiles.blueBlockTilesheet, TILE_WIDTH, TILE_HEIGHT);
 			MapTiles.tiles[selectedSquare].spritesheet.setColor(sf::Color(255, 255, 255, 255));
-			//MapTiles.tileset[selectedSquare].setTexture(*MapTiles.blueBlockTexture);
-			//MapTiles.tileset[selectedSquare].setColor(sf::Color(255, 255, 255, 255));
+			
 			MapTiles.tiles[selectedSquare].tileID = 2;
 			MapTiles.saveMap[selectedSquare] = 2;
 		}
@@ -158,8 +155,7 @@ void Example::update(float deltaT)
 		{
 			MapTiles.tiles[selectedSquare].Load(MapTiles.greenBlockTilesheet, TILE_WIDTH, TILE_HEIGHT);
 			MapTiles.tiles[selectedSquare].spritesheet.setColor(sf::Color(255, 255, 255, 255));
-			//MapTiles.tileset[selectedSquare].setTexture(*MapTiles.greenBlockTexture);
-			//MapTiles.tileset[selectedSquare].setColor(sf::Color(255, 255, 255, 255));
+			
 			MapTiles.tiles[selectedSquare].tileID = 3;
 			MapTiles.saveMap[selectedSquare] = 3;
 		}
@@ -167,14 +163,11 @@ void Example::update(float deltaT)
 		{
 			MapTiles.tiles[selectedSquare].Load(MapTiles.yellowBlockTilesheet, TILE_WIDTH, TILE_HEIGHT);
 			MapTiles.tiles[selectedSquare].spritesheet.setColor(sf::Color(255, 255, 255, 255));
-			//MapTiles.tileset[selectedSquare].setTexture(*MapTiles.yellowBlockTexture);
-			//MapTiles.tileset[selectedSquare].setColor(sf::Color(255, 255, 255, 255));
+			
 			MapTiles.tiles[selectedSquare].tileID = 4;
 			MapTiles.saveMap[selectedSquare] = 4;
 		}
 	}
-	
-	//exampleTileAnim.Update();
 
 	for (size_t i = 0; i < TILE_ARRAY_SIZE; i++)
 	{
@@ -189,13 +182,12 @@ void Example::render()
 	
 	for (size_t i = 0; i < TILE_ARRAY_SIZE; i++)
 	{
-		m_window.draw(MapTiles.tileset[i]);
+		//m_window.draw(MapTiles.tileset[i]);
 		MapTiles.tiles[i].Render(m_window);
 	}
 
 	LineGrid.Draw(m_window);
 
-	//exampleTileAnim.Render(m_window);
 }
 
 void Example::cleanup()

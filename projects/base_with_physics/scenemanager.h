@@ -10,7 +10,8 @@ public:
 	SceneManager();
 	~SceneManager();
 
-	int currentSceneIndex;
+	int currentSceneIndex = 0;
+	//int previousSceneIndex = 0;
 
 	std::vector <Scene*> scenes;
 
@@ -18,7 +19,7 @@ public:
 	void RemoveScene(int sceneIndex);
 	void LoadScene(int sceneIndex, sf::RenderWindow& window);
 
-	void UpdateScene();
+	void UpdateScene(sf::RenderWindow& window);
 	void RenderScene(sf::RenderWindow& window);
 
 };

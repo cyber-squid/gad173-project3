@@ -100,13 +100,13 @@
   <ItemGroup>
     <ClInclude Include="app.h" />
     <ClInclude Include="example.h" />
+    <ClInclude Include="gameanimator.h" />
+    <ClInclude Include="gamemap.h" />
+    <ClInclude Include="gameload.h" />
+    <ClInclude Include="gametile.h" />
     <ClInclude Include="levelone.h" />
     <ClInclude Include="leveltwo.h" />
     <ClInclude Include="mainmenu.h" />
-    <ClInclude Include="Rabbit.h">
-      <SubType>
-      </SubType>
-    </ClInclude>
     <ClInclude Include="scene.h" />
     <ClInclude Include="scenemanager.h" />
   </ItemGroup>
@@ -114,14 +114,14 @@
     <ClCompile Include="app.cpp" />
     <ClCompile Include="dependencies.cpp" />
     <ClCompile Include="example.cpp" />
+    <ClCompile Include="gameanimator.cpp" />
+    <ClCompile Include="gamemap.cpp" />
+    <ClCompile Include="gameload.cpp" />
+    <ClCompile Include="gametile.cpp" />
     <ClCompile Include="levelone.cpp" />
     <ClCompile Include="leveltwo.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mainmenu.cpp" />
-    <ClCompile Include="Rabbit.cpp">
-      <SubType>
-      </SubType>
-    </ClCompile>
     <ClCompile Include="scene.cpp" />
     <ClCompile Include="scenemanager.cpp" />
   </ItemGroup>

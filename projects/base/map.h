@@ -2,6 +2,23 @@
 #include <SFML/Graphics.hpp>
 #include "tile.h"
 
+#define CELL_COUNT_X 8
+#define CELL_COUNT_Y 8
+
+#define CELL_WIDTH 100
+#define CELL_HEIGHT 50
+
+#define X_LINES_AMNT   CELL_COUNT_X + 1
+#define Y_LINES_AMNT   CELL_COUNT_Y + 1
+
+#define LINE_WIDTH 2
+
+#define X_LINE_LENGTH   CELL_WIDTH * CELL_COUNT_X
+#define Y_LINE_LENGTH   CELL_HEIGHT * CELL_COUNT_Y
+
+#define GRID_OFFSET_X 40
+#define GRID_OFFSET_Y 40
+
 #define TILE_WIDTH 53
 #define TILE_HEIGHT 25
 
@@ -20,8 +37,7 @@ public:
 	~Map();
 
 	void PrintCurrentSave();
-	void GetMousePosOnGrid(sf::RenderWindow& window);
-	void PrintTileID();
+
 	int tileIDSelected = 0;
 
 	sf::Texture* redBlockTexture;
@@ -35,7 +51,7 @@ public:
 	sf::Texture* greenBlockTilesheet;
 	sf::Texture* yellowBlockTilesheet;
 
-	sf::Sprite tileset[TILE_ARRAY_SIZE];
+	//sf::Sprite tileset[TILE_ARRAY_SIZE];
 
 	Tile tiles[TILE_ARRAY_SIZE];
 

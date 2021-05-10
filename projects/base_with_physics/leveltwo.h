@@ -3,11 +3,16 @@
 
 class LevelTwo : public Scene
 {
+public:
 	LevelTwo();
 	~LevelTwo();
 
-	void Load();
-	void Update();
+	void Load(sf::RenderWindow& window);
+	void Update(sf::RenderWindow& window);
 	void Render(sf::RenderWindow& window);
+
+	sf::Sprite* backgroundSprite;
+
+	std::string MapFileTwo = "savefile2.txt";
 };
 

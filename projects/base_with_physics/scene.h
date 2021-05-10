@@ -12,8 +12,9 @@ public:
 	int Index = 0;
 
 	virtual void Load(sf::RenderWindow& window);
-	virtual void Update();
+	virtual void Update(sf::RenderWindow& window);
 	virtual void Render(sf::RenderWindow& window);
+	
 
 };
 

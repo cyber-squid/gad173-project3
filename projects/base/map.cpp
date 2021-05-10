@@ -1,7 +1,6 @@
 #include <iostream>
 #include "kage2dutil/texture_manager.h"
 #include "map.h"
-#include "grid.h"
 
 Map::Map()
 {
@@ -39,45 +38,35 @@ void Map::PrintCurrentSave()
 				tiles[i].tileID = 0;
 				tiles[i].Load(blueBlockTilesheet, TILE_WIDTH, TILE_HEIGHT);
 				tiles[i].spritesheet.setColor(sf::Color(255, 255, 255, 0));
-				//tileset[i].setTexture(*errorBlockTexture);
-				//tileset[i].setColor(sf::Color(255, 255, 255, 0));
-				saveMap[i] = 0;
+				//saveMap[i] = 0;
 			}
 			if (saveMap[i] == 1)
 			{
 				tiles[i].tileID = 1;
 				tiles[i].Load(redBlockTilesheet, TILE_WIDTH, TILE_HEIGHT);
 				tiles[i].spritesheet.setColor(sf::Color(255, 255, 255, 255));
-				//tileset[i].setTexture(*redBlockTexture); 
-				//tileset[i].setColor(sf::Color(255, 255, 255, 255));
-				saveMap[i] = 1;
+				//saveMap[i] = 1;
 			}
 			if (saveMap[i] == 2)
 			{
 				tiles[i].tileID = 2;
 				tiles[i].Load(blueBlockTilesheet, TILE_WIDTH, TILE_HEIGHT);
 				tiles[i].spritesheet.setColor(sf::Color(255, 255, 255, 255));
-				//tileset[i].setTexture(*blueBlockTexture);
-				//tileset[i].setColor(sf::Color(255, 255, 255, 255));
-				saveMap[i] = 2;
+				//saveMap[i] = 2;
 			}
 			if (saveMap[i] == 3)
 			{
 				tiles[i].tileID = 3;
 				tiles[i].Load(greenBlockTilesheet, TILE_WIDTH, TILE_HEIGHT);
 				tiles[i].spritesheet.setColor(sf::Color(255, 255, 255, 255));
-				//tileset[i].setTexture(*greenBlockTexture);
-				//tileset[i].setColor(sf::Color(255, 255, 255, 255));
-				saveMap[i] = 3;
+				//saveMap[i] = 3;
 			}
 			if (saveMap[i] == 4)
 			{
 				tiles[i].tileID = 4;
 				tiles[i].Load(yellowBlockTilesheet, TILE_WIDTH, TILE_HEIGHT);
 				tiles[i].spritesheet.setColor(sf::Color(255, 255, 255, 255));
-				//tileset[i].setTexture(*yellowBlockTexture);
-				//tileset[i].setColor(sf::Color(255, 255, 255, 255));
-				saveMap[i] = 4;
+				//saveMap[i] = 4;
 			}
 			else
 			{
@@ -98,77 +87,3 @@ void Map::PrintCurrentSave()
 	}
 }
 
-void Map::GetMousePosOnGrid(sf::RenderWindow& window)
-{
-	//how it should work:
-	//-if mouse clicked, get x and y
-	//-divide x and y by width and height
-	//-cast them to ints to keep accuracy, then use the formula x + y * x cell count
-	//-use this to determine index number for the grid tile and load the selected sprite
-	//to the corresponding index no.  depending on which tile type the player selected
-
-	sf::Vector2i mousePos = sf::Mouse::getPosition(window);
-
-	if (
-		mousePos.x >= GRID_OFFSET_X && mousePos.x <= X_LINE_LENGTH
-		&& mousePos.y >= GRID_OFFSET_Y && mousePos.y <= (Y_LINE_LENGTH + (CELL_HEIGHT / 2))
-		&& sf::Mouse::isButtonPressed(sf::Mouse::Left))
-	{
-
-		int mouseCellX = ((mousePos.x - GRID_OFFSET_X) / CELL_WIDTH);
-		int mouseCellY = ((mousePos.y - GRID_OFFSET_Y) / CELL_HEIGHT);
-
-		int selectedSquare = mouseCellX + mouseCellY * (X_LINES_AMNT - 1);
-		std::cout << selectedSquare << std::endl;
-
-		if (tileIDSelected == 0)
-		{
-			tiles[selectedSquare].Load(blueBlockTilesheet, TILE_WIDTH, TILE_HEIGHT);
-			tiles[selectedSquare].spritesheet.setColor(sf::Color(255, 255, 255, 0));
-			//MapTiles.tileset[selectedSquare].setTexture(*MapTiles.errorBlockTexture);
-			//MapTiles.tileset[selectedSquare].setColor(sf::Color(255, 255, 255, 0));
-			tiles[selectedSquare].tileID = 0;
-			saveMap[selectedSquare] = 0;
-		}
-		if (tileIDSelected == 1)
-		{
-			tiles[selectedSquare].Load(redBlockTilesheet, TILE_WIDTH, TILE_HEIGHT);
-			tiles[selectedSquare].spritesheet.setColor(sf::Color(255, 255, 255, 255));
-			//MapTiles.tileset[selectedSquare].setTexture(*MapTiles.redBlockTexture);
-			//MapTiles.tileset[selectedSquare].setColor(sf::Color(255, 255, 255, 255));
-			tiles[selectedSquare].tileID = 1;
-			saveMap[selectedSquare] = 1;
-		}
-		if (tileIDSelected == 2)
-		{
-			tiles[selectedSquare].Load(blueBlockTilesheet, TILE_WIDTH, TILE_HEIGHT);
-			tiles[selectedSquare].spritesheet.setColor(sf::Color(255, 255, 255, 255));
-			//MapTiles.tileset[selectedSquare].setTexture(*MapTiles.blueBlockTexture);
-			//MapTiles.tileset[selectedSquare].setColor(sf::Color(255, 255, 255, 255));
-			tiles[selectedSquare].tileID = 2;
-			saveMap[selectedSquare] = 2;
-		}
-		if (tileIDSelected == 3)
-		{
-			tiles[selectedSquare].Load(greenBlockTilesheet, TILE_WIDTH, TILE_HEIGHT);
-			tiles[selectedSquare].spritesheet.setColor(sf::Color(255, 255, 255, 255));
-			//MapTiles.tileset[selectedSquare].setTexture(*MapTiles.greenBlockTexture);
-			//MapTiles.tileset[selectedSquare].setColor(sf::Color(255, 255, 255, 255));
-			tiles[selectedSquare].tileID = 3;
-			saveMap[selectedSquare] = 3;
-		}
-		if (tileIDSelected == 4)
-		{
-			tiles[selectedSquare].Load(yellowBlockTilesheet, TILE_WIDTH, TILE_HEIGHT);
-			tiles[selectedSquare].spritesheet.setColor(sf::Color(255, 255, 255, 255));
-			//MapTiles.tileset[selectedSquare].setTexture(*MapTiles.yellowBlockTexture);
-			//MapTiles.tileset[selectedSquare].setColor(sf::Color(255, 255, 255, 255));
-			tiles[selectedSquare].tileID = 4;
-			saveMap[selectedSquare] = 4;
-		}
-	}
-}
-
-void Map::PrintTileID()
-{
-}

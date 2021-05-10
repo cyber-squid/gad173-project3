@@ -3,10 +3,8 @@
 #include "app.h"
 #include "scenemanager.h"
 #include "scene.h"
-#include "mainmenu.h"
+#include "gamemap.h"
 
-//#include "kage2dutil/physics.h"
-//#include "rabbit.h"
 
 class Example : public App
 {
@@ -19,7 +17,10 @@ public:
 	virtual void cleanup();
 	static Example &inst();
 
-	SceneManager sManager;
+
+	static SceneManager sManager;
+
+	static GameMap gameMapTiles;
 
 	sf::Sprite *m_backgroundSprite;
 };

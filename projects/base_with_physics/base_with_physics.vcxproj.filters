@@ -27,9 +27,6 @@
     <ClCompile Include="example.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Rabbit.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="scenemanager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -45,15 +42,24 @@
     <ClCompile Include="leveltwo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="gamemap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gametile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gameanimator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gameload.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="app.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="example.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Rabbit.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="scenemanager.h">
@@ -69,6 +75,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="leveltwo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gamemap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gametile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gameanimator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gameload.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

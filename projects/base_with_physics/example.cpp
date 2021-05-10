@@ -1,5 +1,10 @@
 #include "example.h"
+#include "mainmenu.h"
 #include "levelone.h"
+#include "leveltwo.h"
+
+SceneManager Example::sManager = SceneManager();
+GameMap Example::gameMapTiles = GameMap();
 
 Example::Example(): App()
 {
@@ -17,18 +22,6 @@ Example &Example::inst()
 
 bool Example::start()
 {
-	/*
-	// Initialise the physics system. Set the default gravity to 9.8m/s^2 down.
-	kage::Physics::init(b2Vec2(0, 9.8));
-	// Floor, left wall and right wall static colliders.
-	kage::Physics::BoxBuilder().pos(kf::Vector2(15, 16)).size(30, 1).build(kage::Physics::getDefaultStatic());
-	kage::Physics::BoxBuilder().pos(kf::Vector2(0, 8)).size(1, 16).build(kage::Physics::getDefaultStatic());
-	kage::Physics::BoxBuilder().pos(kf::Vector2(30, 8)).size(1, 16).build(kage::Physics::getDefaultStatic());
-
-
-	Rabbit *rabbit = kage::World::build<Rabbit>();
-	rabbit->position(2, 4); // Note that this now uses metres instead of pixels.
-	*/
 
 	m_backgroundSprite = kage::TextureManager::getSprite("data/sky.jpg");
 	sf::Vector2u resolution = m_backgroundSprite->getTexture()->getSize();
@@ -36,6 +29,8 @@ bool Example::start()
 
 	sManager.AddScene(new MainMenu());
 	sManager.AddScene(new LevelOne());
+	sManager.AddScene(new LevelTwo());
+
 	sManager.LoadScene(0, m_window);
 
 	return true;
@@ -46,30 +41,20 @@ void Example::update(float deltaT)
 	// You need to update the physics system every game update
 
 	//kage::Physics::update(deltaT);
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
-	{
-		sManager.scenes[1]->isLoaded = false;
-		sManager.LoadScene(0, m_window);
-	}
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::B))
-	{
-		sManager.scenes[0]->isLoaded = false;
-		sManager.LoadScene(1, m_window);
-	}
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape) && m_window.hasFocus())
 	{
 		m_running = false;
 	}
 
-	/*ImGui::Begin("Kage2D");
+	ImGui::Begin("Kage2D");
 	if(ImGui::Button("Exit"))
 	{ 
 		m_running = false;
 	}
-	ImGui::End();*/
+	ImGui::End();
 
-	sManager.UpdateScene();
+	sManager.UpdateScene(m_window);
 
 }
 

@@ -1,5 +1,3 @@
-﻿  app.cpp
-  example.cpp
-C:\SAE Code Projects\GAD173-p3-wip\projects\base\app.cpp(43,24): warning C4100: 'deltaT': unreferenced formal parameter
+﻿  example.cpp
 C:\SAE Code Projects\GAD173-p3-wip\projects\base\example.cpp(48,28): warning C4100: 'deltaT': unreferenced formal parameter
   base.vcxproj -> C:\SAE Code Projects\GAD173-p3-wip\bin\editor_d.exe

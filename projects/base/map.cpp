@@ -38,35 +38,35 @@ void Map::PrintCurrentSave()
 				tiles[i].tileID = 0;
 				tiles[i].Load(blueBlockTilesheet, TILE_WIDTH, TILE_HEIGHT);
 				tiles[i].spritesheet.setColor(sf::Color(255, 255, 255, 0));
-				//saveMap[i] = 0;
+				saveMap[i] = 0;
 			}
 			if (saveMap[i] == 1)
 			{
 				tiles[i].tileID = 1;
 				tiles[i].Load(redBlockTilesheet, TILE_WIDTH, TILE_HEIGHT);
 				tiles[i].spritesheet.setColor(sf::Color(255, 255, 255, 255));
-				//saveMap[i] = 1;
+				saveMap[i] = 1;
 			}
 			if (saveMap[i] == 2)
 			{
 				tiles[i].tileID = 2;
 				tiles[i].Load(blueBlockTilesheet, TILE_WIDTH, TILE_HEIGHT);
 				tiles[i].spritesheet.setColor(sf::Color(255, 255, 255, 255));
-				//saveMap[i] = 2;
+				saveMap[i] = 2;
 			}
 			if (saveMap[i] == 3)
 			{
 				tiles[i].tileID = 3;
 				tiles[i].Load(greenBlockTilesheet, TILE_WIDTH, TILE_HEIGHT);
 				tiles[i].spritesheet.setColor(sf::Color(255, 255, 255, 255));
-				//saveMap[i] = 3;
+				saveMap[i] = 3;
 			}
 			if (saveMap[i] == 4)
 			{
 				tiles[i].tileID = 4;
 				tiles[i].Load(yellowBlockTilesheet, TILE_WIDTH, TILE_HEIGHT);
 				tiles[i].spritesheet.setColor(sf::Color(255, 255, 255, 255));
-				//saveMap[i] = 4;
+				saveMap[i] = 4;
 			}
 			else
 			{
